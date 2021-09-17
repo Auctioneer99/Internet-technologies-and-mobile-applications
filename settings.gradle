@@ -10,3 +10,4 @@ rootProject.name = "Internet-technologies-and-mobile-applications"
 include ':app'
 include ':lab1'
 include ':lab2'
+include ':lab3'
