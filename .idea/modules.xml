@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Internet-technologies-and-mobile-applications.iml" filepath="$PROJECT_DIR$/.idea/modules/Internet-technologies-and-mobile-applications.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Internet-technologies-and-mobile-applications.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Internet-technologies-and-mobile-applications.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lab1/Internet-technologies-and-mobile-applications.app.lab1.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lab1/Internet-technologies-and-mobile-applications.app.lab1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab1/Internet-technologies-and-mobile-applications.lab1.iml" filepath="$PROJECT_DIR$/.idea/modules/lab1/Internet-technologies-and-mobile-applications.lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab2/Internet-technologies-and-mobile-applications.lab2.iml" filepath="$PROJECT_DIR$/.idea/modules/lab2/Internet-technologies-and-mobile-applications.lab2.iml" />
     </modules>
   </component>
 </project>
