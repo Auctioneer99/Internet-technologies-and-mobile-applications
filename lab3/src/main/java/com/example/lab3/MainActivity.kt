@@ -65,6 +65,12 @@ class MainActivity : AppCompatActivity() {
         UpdateValue();
     }
 
+    public fun Ac(view: View)
+    {
+        _calculator.Ac();
+        UpdateValue();
+    }
+
     private fun UpdateValue()
     {
         _text.text = _calculator.Value.toString() + " " + _calculator.Operation + " " + _calculator.Current;

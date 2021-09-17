@@ -26,10 +26,7 @@ class Calculator
             MathOperation.MULTIPLICATION -> Value *= a;
             MathOperation.DIVISION -> Value /= a;
         }
-        _current = "";
-        _hasInitialValue = false;
-        _operation = MathOperation.NONE;
-        _isNegate = false;
+        ClearNextOperation();
     }
 
     public fun SelectOperator(operation: MathOperation)
@@ -72,6 +69,20 @@ class Calculator
             return;
         }
         _isNegate = !_isNegate;
+    }
+
+    public fun Ac()
+    {
+        Value = 0.0;
+        ClearNextOperation();
+    }
+
+    private fun ClearNextOperation()
+    {
+        _current = "";
+        _hasInitialValue = false;
+        _operation = MathOperation.NONE;
+        _isNegate = false;
     }
 }
 
