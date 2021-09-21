@@ -2,94 +2,93 @@ package com.example.lab3
 
 class Calculator
 {
-    public var Value : Double = 0.0;
-    public val Current: String
-        get() = (if (_isNegate) "-" else "") + _current;
-    public val Operation: MathOperation
-        get() = _operation;
+    public var FirstValue: Value = Value()
+        private set;
+    public var SecondValue: Value = Value()
+        private set;
+    public var Operation: MathOperation = MathOperation.NONE
+        private set;
 
-    private var _current : String = "";
-    private var _hasInitialValue : Boolean = false;
-    private var _operation : MathOperation = MathOperation.NONE;
-    private var _isNegate : Boolean = false;
+    private var _shouldAppendFirstValue: Boolean = false;
 
     public fun Calculate()
     {
-        var a = _current.toDoubleOrNull()?: 0.0;
-        if (_isNegate)
+        var first: Double = FirstValue.Number;
+        var second: Double = SecondValue.Number;
+        when (Operation) {
+            MathOperation.PLUS -> first += second;
+            MathOperation.MINUS -> first -= second;
+            MathOperation.MULTIPLICATION -> first *= second;
+            MathOperation.DIVISION -> first /= second;
+        }
+        Reset();
+        if (first.isFinite() == false)
         {
-            a *= -1;
+            first = 0.0;
         }
-        when (_operation) {
-            MathOperation.PLUS -> Value += a;
-            MathOperation.MINUS -> Value -= a;
-            MathOperation.MULTIPLICATION -> Value *= a;
-            MathOperation.DIVISION -> Value /= a;
-        }
-        ClearNextOperation();
+        FirstValue.SetValue(first);
+        _shouldAppendFirstValue = false;
     }
 
     public fun SelectOperator(operation: MathOperation)
     {
-        if (_hasInitialValue)
+        if (SecondValue.Initialized)
         {
             Calculate();
         }
-        _operation = operation;
+        if (FirstValue.Initialized)
+        {
+            Operation = operation;
+        }
     }
 
     public fun AddDigit(value: Int)
     {
-        if (_operation == MathOperation.NONE)
-        {
-            return;
-        }
-        _current += value;
-        _hasInitialValue = true;
+        HandleFirstValue();
+        SelectValue().AddDigit(value);
     }
 
     public fun AddDot()
     {
-        if (_operation == MathOperation.NONE)
-        {
-            return;
-        }
-        if (_hasInitialValue == false)
-        {
-            _current += "0";
-        }
-        _current += ".";
-        _hasInitialValue = true;
+        HandleFirstValue();
+        SelectValue().AddDot();
     }
 
     public fun Negate()
     {
-        if (_operation == MathOperation.NONE)
+        HandleFirstValue();
+        SelectValue().Negate();
+    }
+
+    private fun SelectValue(): Value
+    {
+        if (Operation == MathOperation.NONE)
         {
-            return;
+            return FirstValue;
         }
-        _isNegate = !_isNegate;
+        else
+        {
+            return SecondValue;
+        }
     }
 
-    public fun Ac()
+    private fun HandleFirstValue()
     {
-        Value = 0.0;
-        ClearNextOperation();
+        if (Operation == MathOperation.NONE)
+        {
+            if (_shouldAppendFirstValue == false)
+            {
+                FirstValue.Reset();
+                _shouldAppendFirstValue = true;
+            }
+        }
     }
 
-    private fun ClearNextOperation()
+    public fun Reset()
     {
-        _current = "";
-        _hasInitialValue = false;
-        _operation = MathOperation.NONE;
-        _isNegate = false;
+        Operation = MathOperation.NONE;
+        FirstValue.Reset();
+        SecondValue.Reset();
+        _shouldAppendFirstValue = true;
     }
-}
-
-enum class MathOperation(val operation: Byte) {
-    NONE(0),
-    PLUS(1),
-    MINUS(2),
-    MULTIPLICATION(3),
-    DIVISION(4)
 }

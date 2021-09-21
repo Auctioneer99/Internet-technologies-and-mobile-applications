@@ -67,12 +67,12 @@ class MainActivity : AppCompatActivity() {
 
     public fun Ac(view: View)
     {
-        _calculator.Ac();
+        _calculator.Reset();
         UpdateValue();
     }
 
     private fun UpdateValue()
     {
-        _text.text = _calculator.Value.toString() + " " + _calculator.Operation + " " + _calculator.Current;
+        _text.text = _calculator.FirstValue.RawNumber + " " + _calculator.Operation.operation + " " + _calculator.SecondValue.RawNumber;
     }
 }
