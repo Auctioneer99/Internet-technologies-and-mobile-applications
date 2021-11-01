@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var _container: TodoContainer = TodoContainer();
+
     private var _addResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(), ActivityResultCallback{
         if (it.resultCode == RESULT_OK) {
             var item: TodoItem? = it.data?.getParcelableExtra<TodoItem>("item");

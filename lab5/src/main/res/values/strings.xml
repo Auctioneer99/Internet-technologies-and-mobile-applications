@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">lab5</string>
+    <string name="menu_1">Чат</string>
+    <string name="menu_2">Викторина</string>
+    <string name="create_comment">Добавить запись</string>
+    <string name="chat_title">Чат</string>
+    <string name="quiz_title">Викторина</string>
+    <string name="quiz_final_title">Викторина закончена</string>
+    <string name="quiz_initial_title">Викторина</string>
+    <string name="button_start">Начать</string>
+</resources>
