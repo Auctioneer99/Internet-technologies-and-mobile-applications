@@ -21,7 +21,7 @@ class QuizFactory
             .SetInitialPage(InitialPage(description));
         //Fox api
 
-        val questions = listOf(Question(1, "Что это", listOf(Option(1, "Это"), Option(2, "Или это"))));
+        val questions = listOf(Question(1, "Что это", listOf(Option(1, "Это"), Option(2, "Или это"), Option(3, "Или это"), Option(4, "Или это"))));
 
         for(question in questions)
         {

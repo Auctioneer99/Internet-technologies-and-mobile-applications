@@ -11,7 +11,7 @@ abstract class AQuizFinalFragment(): Fragment() {
     public abstract fun SetResult(result: Result);
 }
 
-abstract class AQuizQuestionFragment(question: Question) : Fragment() {
+abstract class AQuizQuestionFragment(protected val _question: Question) : Fragment() {
     public val Chosen : Event<OptionSelectedArg> = Event();
 }
 
