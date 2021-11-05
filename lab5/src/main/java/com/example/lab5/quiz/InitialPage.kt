@@ -7,21 +7,18 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lab5.R
 import com.example.lab5.quiz.lib.AQuizStartFragment
-import kotlinx.android.synthetic.main.quiz_initialpage.*
-import kotlinx.android.synthetic.main.quiz_initialpage.view.*
+import kotlinx.android.synthetic.main.page_quiz_initial.*
+import kotlinx.android.synthetic.main.page_quiz_initial.toolbar
 
 class InitialPage(private val _description: String) : AQuizStartFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
-        val inf = inflater.inflate(R.layout.quiz_initialpage, container, false);
-        (activity as AppCompatActivity).setSupportActionBar(toolbar);
-        inf.text_description.text = _description;
-        inf.button_start.setOnClickListener { _ -> Start.invoke(Unit)}
-        return inf;
-    }
+        = inflater.inflate(R.layout.page_quiz_initial, container, false);
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).setSupportActionBar(toolbar);
+        text_description.text = _description;
+        button_start.setOnClickListener { _ -> Start.invoke(Unit)}
     }
 }

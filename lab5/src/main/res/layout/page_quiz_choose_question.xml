@@ -60,20 +60,25 @@
                     android:layout_height="331dp"
                     android:layout_weight="0.5">
 
-
-                    <FrameLayout
-                        android:id="@+id/message"
+                    <com.example.lab5.views.ChooseQuestionView
+                        android:id="@+id/answer_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:message=""
+                        app:state="Default" />
 
-                    </FrameLayout>
-
-                    <FrameLayout
+                    <com.example.lab5.views.ChooseQuestionView
                         android:id="@+id/answer_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </FrameLayout>
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:message=""
+                        app:state="Default" />
 
                 </TableRow>
 
@@ -82,19 +87,24 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5">
 
-                    <FrameLayout
+                    <com.example.lab5.views.ChooseQuestionView
                         android:id="@+id/answer_3"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </FrameLayout>
-
-                    <FrameLayout
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:message=""
+                        app:state="Default" />
+                    <com.example.lab5.views.ChooseQuestionView
                         android:id="@+id/answer_4"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </FrameLayout>
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:message=""
+                        app:state="Default" />
                 </TableRow>
 
             </TableLayout>

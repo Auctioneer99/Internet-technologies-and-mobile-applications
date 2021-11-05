@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     });
+
     private var _observeResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(), ActivityResultCallback{
         if (it.resultCode == RESULT_OK) {
             var position: Int = it.data?.getIntExtra("index", -1)?: -1;

@@ -8,7 +8,7 @@ abstract class AQuizStartFragment() : Fragment() {
 }
 
 abstract class AQuizFinalFragment(): Fragment() {
-    public abstract fun SetResult(result: Result);
+    public lateinit var Result: Result
 }
 
 abstract class AQuizQuestionFragment(protected val _question: Question) : Fragment() {

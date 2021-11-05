@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/create"
+        android:id="@+id/create_message"
         android:icon="@drawable/ic_create"
         app:showAsAction="ifRoom"
         android:title="@string/create_comment" />

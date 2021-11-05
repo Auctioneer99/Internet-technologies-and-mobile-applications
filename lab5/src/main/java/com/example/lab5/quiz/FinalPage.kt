@@ -8,23 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.lab5.R
 import com.example.lab5.quiz.lib.AQuizFinalFragment
 import com.example.lab5.quiz.lib.Result
-import kotlinx.android.synthetic.main.quiz_finalpage.*
+import kotlinx.android.synthetic.main.page_quiz_final.*
+import kotlinx.android.synthetic.main.page_quiz_final.toolbar
 
 
 class FinalPage() : AQuizFinalFragment() {
-    override fun SetResult(result: Result) {
-        this.result.text = result.Score.toString();
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
-        val inf = inflater.inflate(R.layout.quiz_finalpage, container, false);
+        = inflater.inflate(R.layout.page_quiz_final, container, false);
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         (activity as AppCompatActivity).setSupportActionBar(toolbar);
 
-        return inf;
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        result.text = Result.Score.toString();
     }
 }

@@ -25,7 +25,7 @@ class QuizFactory
 
         for(question in questions)
         {
-            builder.AddNextView(ChooseAnswerQuestion(question));
+            builder.AddNextView(ChooseAnswerQuestionPage(question));
         }
 
         //

@@ -50,8 +50,15 @@ class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFin
         }
         else
         {
-            View = _final;
+            SetResult();
         }
+    }
+
+    private fun SetResult()
+    {
+        //calculate;
+        _final.Result = Result(1);
+        View = _final;
     }
 }
 
