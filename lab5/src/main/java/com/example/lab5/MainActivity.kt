@@ -5,14 +5,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.example.lab5.chat.lib.AppDatabase
-import com.example.lab5.chat.lib.CustomMessageProvider
 import com.example.lab5.chat.lib.IMessageProvider
 import com.example.lab5.chat.lib.RoomMessageProvider
 import kotlinx.android.synthetic.main.activity_main.*
 import com.example.lab5.quiz.lib.*
-import com.example.lab5.quiz.*
 
 class MainActivity : AppCompatActivity() {
 

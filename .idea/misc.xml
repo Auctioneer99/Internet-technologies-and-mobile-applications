@@ -15,6 +15,7 @@
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab4/src/main/res/layout/activity_observe.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab4/src/main/res/layout/item_layout.xml" value="0.28854166666666664" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab4/src/main/res/menu/main_menu.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/drawable/button_rounded.xml" value="0.2140625" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/activity_chat_add_message.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/chat_layout.xml" value="0.20520833333333333" />
@@ -23,15 +24,17 @@
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/default_layout.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/navigation_layout.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/page_chat.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/page_quiz_choose_question.xml" value="0.44469525959367945" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/page_quiz_final.xml" value="0.19791666666666666" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/page_quiz_initial.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/question_view.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/quiz_choose_question.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/quiz_finalpage.xml" value="0.19791666666666666" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/quiz_initialpage.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/quiz_layout.xml" value="0.2015625" />
-        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/view_chat_message.xml" value="0.33" />
-        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/view_quiz_choose_answer.xml" value="0.20520833333333333" />
-        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/menu/bottom_navigation_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/view_chat_message.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/layout/view_quiz_choose_answer.xml" value="0.35688405797101447" />
+        <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/menu/chat_menu.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidProjects/Internet-technologies-and-mobile-applications/lab5/src/main/res/menu/quiz_menu.xml" value="0.2015625" />
       </map>
@@ -42,5 +45,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20520833333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>

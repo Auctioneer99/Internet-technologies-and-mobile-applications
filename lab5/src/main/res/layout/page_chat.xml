@@ -7,8 +7,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="@color/main"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -16,12 +18,15 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/main"
+            android:backgroundTintMode="src_in"
+            android:foregroundTint="@color/main"
+            android:foregroundTintMode="src_in"
             app:menu="@menu/chat_menu"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="@string/chat_title" />
+            app:title="@string/chat_title"
+            app:titleTextColor="@color/main" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

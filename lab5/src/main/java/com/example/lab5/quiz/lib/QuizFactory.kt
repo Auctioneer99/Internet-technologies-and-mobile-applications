@@ -1,9 +1,8 @@
-package com.example.lab5.quiz
+package com.example.lab5.quiz.lib
 
-import com.example.lab5.quiz.lib.Option
-import com.example.lab5.quiz.lib.Question
-import com.example.lab5.quiz.lib.QuizFragmentHandler
-import com.example.lab5.quiz.lib.QuizViewBuilder
+import com.example.lab5.quiz.ChooseAnswerQuestionPage
+import com.example.lab5.quiz.FinalPage
+import com.example.lab5.quiz.InitialPage
 
 class QuizFactory
 {

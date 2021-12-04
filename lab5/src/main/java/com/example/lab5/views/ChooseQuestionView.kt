@@ -22,7 +22,7 @@ class ChooseQuestionView(context: Context, attrs: AttributeSet): ConstraintLayou
                 AnswerState.Default -> {
 
                     your_choice.visibility = View.INVISIBLE;
-                    outer_frame.setCardBackgroundColor(Color.WHITE)
+                    outer_frame.setCardBackgroundColor(Color.YELLOW)
                 }
                 AnswerState.Selected -> {
                     your_choice.visibility = View.VISIBLE;
