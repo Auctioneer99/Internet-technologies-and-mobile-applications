@@ -22,11 +22,11 @@ class ChooseQuestionView(context: Context, attrs: AttributeSet): ConstraintLayou
                 AnswerState.Default -> {
 
                     your_choice.visibility = View.INVISIBLE;
-                    outer_frame.setCardBackgroundColor(Color.YELLOW)
+                    outer_frame.setCardBackgroundColor(getResources().getColor(R.color.questionGray));
                 }
                 AnswerState.Selected -> {
                     your_choice.visibility = View.VISIBLE;
-                    outer_frame.setCardBackgroundColor(Color.rgb(76, 175, 80));
+                    outer_frame.setCardBackgroundColor(getResources().getColor(R.color.selectedAnswer));
                 }
                 AnswerState.Wrong -> {
 

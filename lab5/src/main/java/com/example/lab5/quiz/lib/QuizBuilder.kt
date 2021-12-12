@@ -5,10 +5,17 @@ class QuizViewBuilder
     private lateinit var _initialPage: AQuizStartFragment;
     private lateinit var _finalPage: AQuizFinalFragment;
     private val _questions: MutableList<AQuizQuestionFragment> = mutableListOf();
+    private lateinit var _checker: IAnswerChecker;
 
     public fun SetInitialPage(fragment: AQuizStartFragment): QuizViewBuilder
     {
         _initialPage = fragment;
+        return this;
+    }
+
+    public fun SetChecker(checker: IAnswerChecker): QuizViewBuilder
+    {
+        _checker = checker;
         return this;
     }
 
@@ -30,7 +37,8 @@ class QuizViewBuilder
         val qHandler = QuizFragmentHandler(
             _initialPage,
             _finalPage,
-            pages
+            pages,
+            _checker
         );
         qHandler.Initialize();
         return qHandler;

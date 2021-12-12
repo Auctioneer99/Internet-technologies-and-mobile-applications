@@ -10,15 +10,13 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:textColor="@color/prime_black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:subtitleTextColor="@color/main"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="Ваше сообщение"
-        app:titleTextColor="@color/black" />
+        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/textView"

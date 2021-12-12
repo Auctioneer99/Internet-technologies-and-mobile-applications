@@ -10,14 +10,14 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/quiz_menu"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:menu="@menu/quiz_menu"
-        app:title="@string/quiz_final_title"/>
+        app:title="@string/quiz_final_title"
+        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/result"

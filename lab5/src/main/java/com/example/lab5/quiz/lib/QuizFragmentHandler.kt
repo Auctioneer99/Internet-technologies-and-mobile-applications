@@ -2,8 +2,9 @@ package com.example.lab5.quiz.lib
 
 import androidx.fragment.app.Fragment
 import com.example.lab5.common.*
+import com.example.lab5.quiz.ChooseAnswerQuestionPage
 
-class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFinalFragment, firstLinkedFragment: LinkedFragment?) {
+class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFinalFragment, firstLinkedFragment: LinkedFragment?, private val _answerChecker : IAnswerChecker) {
     public val ViewChanged: Event<Fragment> = Event();
 
     public var View: Fragment
@@ -21,6 +22,7 @@ class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFin
     private var _question: LinkedFragment? = firstLinkedFragment;
     private val _responseMap: MutableMap<Int, Int> = mutableMapOf();
 
+
     public fun Initialize()
     {
         _initial.Start.plusAssign(::QuizStarted);
@@ -35,8 +37,8 @@ class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFin
 
     private fun OptionChosen(arg: OptionSelectedArg)
     {
-        arg.Question.Chosen.minusAssign(::OptionChosen);
-        _responseMap.put(arg.Question.id, arg.OptionId);
+        arg.View.Chosen.minusAssign(::OptionChosen);
+        _responseMap.put(arg.View.Question.Id, arg.OptionId);
 
         SetFragment(_question?.Next);
     }
@@ -56,8 +58,15 @@ class QuizFragmentHandler(initialView : AQuizStartFragment, finalView : AQuizFin
 
     private fun SetResult()
     {
-        //calculate;
-        _final.Result = Result(1);
+        var count = 0;
+        for(answer in _responseMap)
+        {
+            if (_answerChecker.Check(answer.key, answer.value))
+            {
+                count++;
+            }
+        }
+        _final.Result = Result(count);
         View = _final;
     }
 }

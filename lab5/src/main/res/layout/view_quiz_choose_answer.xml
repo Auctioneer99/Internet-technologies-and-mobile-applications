@@ -10,7 +10,7 @@
         android:id="@+id/outer_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/main"
+        app:cardBackgroundColor="@color/questionGray"
         app:cardCornerRadius="10dp"
         app:contentPadding="4dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center"
-            app:cardBackgroundColor="@color/main"
+            app:cardBackgroundColor="@color/questionGray"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp">
 
@@ -30,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/main"
-                android:textColor="@color/black" />
+                android:background="#00FFFFFF"
+                android:textColor="@color/white" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:layout_gravity="right|top"
                 android:layout_marginTop="-4dp"
                 android:layout_marginRight="-4dp"
-                app:cardBackgroundColor="#00FFFFFF"
+                app:cardBackgroundColor="#000000FF"
                 app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
-                    app:cardBackgroundColor="#4CAF50"
+                    app:cardBackgroundColor="@color/selectedAnswer"
                     app:cardCornerRadius="4dp"
                     app:contentPadding="4dp">
 
@@ -55,9 +55,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right|top"
-                        android:backgroundTint="@color/main"
+                        android:background="#00FFFFFF"
                         android:text="@string/question_your_choice"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>

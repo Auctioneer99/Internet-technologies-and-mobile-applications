@@ -21,11 +21,12 @@ class ChooseAnswerQuestionPage(question: Question): AQuizQuestionFragment(questi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        question_number.text = "Вопрос " + _question.Id;
-        question_description.text = _question.Name;
+        question_number.text = "Вопрос " + Question.Id;
+        question_description.text = Question.Name;
         val ids = listOf(answer_1, answer_2, answer_3, answer_4);
         for((i, answer) in ids.withIndex()) {
-            answer.message.text = _question.Options[i].Message;
+            answer.AnswerId = Question.Options[i].Id;
+            answer.message.text = Question.Options[i].Message;
             answer.setOnClickListener { _ -> OnAnswerChosen(answer) };
         }
         choose_button.setOnClickListener(::OnClickHandle)

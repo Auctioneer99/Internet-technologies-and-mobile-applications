@@ -19,14 +19,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:backgroundTint="@color/main"
             android:backgroundTintMode="src_in"
-            android:foregroundTint="@color/main"
             android:foregroundTintMode="src_in"
             app:menu="@menu/chat_menu"
             app:title="@string/chat_title"
-            app:titleTextColor="@color/main" />
+            app:titleTextColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

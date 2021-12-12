@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="prime_black">#222222</color>
-    <color name="main">#F1D147</color>
+    <color name="main">#f2d247</color>
     <color name="questionGray">#2d2d2d</color>
+    <color name="mainGray">#f2d247</color>
+    <color name="selectedAnswer">#609b34</color>
 </resources>
