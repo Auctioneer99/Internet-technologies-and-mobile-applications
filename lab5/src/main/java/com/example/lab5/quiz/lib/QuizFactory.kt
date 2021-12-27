@@ -58,9 +58,10 @@ class QuizFactory
                 Option(4, "Или это")))
             );
 
+        val count =questions.count();
         for(question in questions)
         {
-            builder.AddNextView(ChooseAnswerQuestionPage(question));
+            builder.AddNextView(ChooseAnswerQuestionPage(question, count));
         }
 
         //

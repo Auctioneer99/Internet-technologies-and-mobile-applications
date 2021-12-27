@@ -7,7 +7,7 @@
     <string name="quiz_title">Викторина</string>
     <string name="quiz_final_title">Викторина закончена</string>
     <string name="quiz_initial_title">Викторина</string>
-    <string name="button_start">Начать</string>
+    <string name="button_start">Начать игру</string>
     <string name="question_next">Продолжить</string>
     <string name="question_your_choice">Ваш выбор</string>
 </resources>

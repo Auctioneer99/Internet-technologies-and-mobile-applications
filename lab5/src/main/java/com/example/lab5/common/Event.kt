@@ -12,7 +12,7 @@ class Event<T> {
     }
 
     operator fun invoke(value: T) {
-        for (observer in observers)
+        for (observer in observers.reversed())
             observer(value)
     }
 }

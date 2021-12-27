@@ -25,8 +25,8 @@ class ChatFragment(private val _messageProvider: IMessageProvider) : Fragment() 
             if (message != null) {
                 GlobalScope.launch {
                     _messageProvider.AddMessage(message);
-                    UpdateMessages();
                 }
+                _container.Add(message);
             }
         }
     });
@@ -52,6 +52,10 @@ class ChatFragment(private val _messageProvider: IMessageProvider) : Fragment() 
         GlobalScope.launch {
             UpdateMessages();
         }
+        val linearLayoutManager = LinearLayoutManager(context)
+        linearLayoutManager.reverseLayout = true
+        linearLayoutManager.stackFromEnd = true
+        recycler.layoutManager = linearLayoutManager
     }
 
     private fun onItemSelected(item: MenuItem): Boolean {

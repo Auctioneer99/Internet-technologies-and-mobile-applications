@@ -11,7 +11,7 @@ import com.example.lab5.quiz.lib.Question
 import kotlinx.android.synthetic.main.page_quiz_choose_question.*
 import kotlinx.android.synthetic.main.view_quiz_choose_answer.view.*
 
-class ChooseAnswerQuestionPage(question: Question): AQuizQuestionFragment(question) {
+class ChooseAnswerQuestionPage(question: Question, private val _questionCount: Int): AQuizQuestionFragment(question) {
 
     private var _selectedAnswer: Answer? = null;
 
@@ -21,7 +21,7 @@ class ChooseAnswerQuestionPage(question: Question): AQuizQuestionFragment(questi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        question_number.text = "Вопрос " + Question.Id;
+        question_number.text = "Вопрос " + Question.Id + "/" + _questionCount;
         question_description.text = Question.Name;
         val ids = listOf(answer_1, answer_2, answer_3, answer_4);
         for((i, answer) in ids.withIndex()) {
